@@ -8,14 +8,21 @@
 		<script src='bower_components/angular-route/angular-route.min.js'></script>
 		
 		<script src='app.module.js'></script>
+		<script src='app.config.js'></script>
+		
 		<script src='card-list/card-list.module.js'></script>
 		<script src='card-list/card-list.component.js'></script>
+
+		<script src='card-detail/card-detail.module.js'></script>
+		<script src='card-detail/card-detail.component.js'></script>
 	</head>
 	<body ng-app='MainApp'>
 		<header></header>
+		
 		<div id='main_content'>
-			<card-list></card-list>
+			<ng-view></ng-view>
 		</div>
+
 		<footer></footer>
 	</body>
 </html>
