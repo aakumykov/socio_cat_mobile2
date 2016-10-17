@@ -1,0 +1,22 @@
+{
+  "name": "socio_cat_mobile2",
+  "authors": [
+    "Андрей Кумыков <aakumykov@yandex.ru>"
+  ],
+  "description": "",
+  "main": "app/index.html",
+  "license": "other",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.5.8",
+    "angular-route": "^1.5.8"
+  }
+}
