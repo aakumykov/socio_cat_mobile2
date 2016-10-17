@@ -1,3 +1,5 @@
 'use strict';
 
-angular.module('MainApp',[]);
+angular.module('MainApp',[
+	'CardList',
+]);
