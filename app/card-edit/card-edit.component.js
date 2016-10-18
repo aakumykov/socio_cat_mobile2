@@ -3,7 +3,7 @@
 angular.module('CardEdit').
 	component('cardEdit',{
 		templateUrl: 'card-edit/card-edit.template.html',
-		controller: ['$http', '$routeParams', function($http, $routeParams){
+		controller: ['$window', '$http', '$routeParams', function($window, $http, $routeParams){
 			var self = this;
 
 			var id = $routeParams.id;
@@ -16,6 +16,7 @@ angular.module('CardEdit').
 
 			this.cancel = function(){
 				console.log('отмена редактирования карточки '+id);
+				$window.location.href = '#!cards/'+id;
 			}
 			this.save = function(){
 				console.log('сохранение карточки '+id);
