@@ -9,7 +9,7 @@ angular.module('MainApp').
 
 			$routeProvider.
 				when('/',{
-					template: '<card-list></card-list>'
+					redirectTo: '/cards'
 				}).
 				when('/cards',{
 					template: '<card-list></card-list>'
