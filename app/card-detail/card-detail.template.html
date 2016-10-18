@@ -1,9 +1,8 @@
 <fieldset>
-	<legend>Подробности карточки {{$ctrl.card.id}}</legend>
+	<legend>{{$ctrl.card.title}}</legend>
 	<div style='float:right;'>
 		<a ng-href='#!/cards/{{$ctrl.card.id}}/edit' title='изменить карточку {{$ctrl.card.id}}'>изменить</a>
 		<a ng-href='#!/cards/{{$ctrl.card.id}}' title='удалить карточку {{$ctrl.card.id}}'>удалить</a>
 	</div>
-	<p>{{$ctrl.card.title}}</p>
 	<p>{{$ctrl.card.content}}</p>
 </fieldset>

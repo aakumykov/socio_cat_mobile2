@@ -8,10 +8,6 @@ angular.module('CardList').
 			
 			$http.get('cards/list.json').then(function(response){
 				self.cardList = response.data;
-
-				for (var i in self.cardList) {
-					console.log(self.cardList[i]);
-				}
 			});
 		}]
 	}
