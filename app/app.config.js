@@ -8,6 +8,9 @@ angular.module('MainApp').
 			$locationProvider.hashPrefix('!');
 
 			$routeProvider.
+				when('/',{
+					template: '<card-list></card-list>'
+				}).
 				when('/cards',{
 					template: '<card-list></card-list>'
 				}).
@@ -18,7 +21,7 @@ angular.module('MainApp').
 					template: '<card-edit></card-edit>'
 				}).
 				otherwise({
-					template: 'Нет такой страницы'
+					template: 'неизвестная страница'
 				});
 		}
 	]);

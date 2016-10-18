@@ -10,6 +10,9 @@
 		<script src='app.module.js'></script>
 		<script src='app.config.js'></script>
 		
+		<script src='page-header/page-header.module.js'></script>
+		<script src='page-header/page-header.component.js'></script>
+
 		<script src='card-list/card-list.module.js'></script>
 		<script src='card-list/card-list.component.js'></script>
 
@@ -20,7 +23,7 @@
 		<script src='card-edit/card-edit.component.js'></script>
 	</head>
 	<body ng-app='MainApp'>
-		<header></header>
+		<page-header></page-header>
 		
 		<div id='main_content'>
 			<ng-view></ng-view>
