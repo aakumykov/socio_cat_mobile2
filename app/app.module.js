@@ -3,5 +3,6 @@
 angular.module('MainApp',[
 	'ngRoute',
 	'CardList',
-	'CardDetail'
+	'CardDetail',
+	'CardEdit',
 ]);

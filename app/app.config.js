@@ -14,6 +14,9 @@ angular.module('MainApp').
 				when('/cards/:id',{
 					template: '<card-detail></card-detail>'
 				}).
+				when('/cards/:id/edit',{
+					template: '<card-edit></card-edit>'
+				}).
 				otherwise({
 					template: 'Нет такой страницы'
 				});
