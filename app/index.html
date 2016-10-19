@@ -20,8 +20,8 @@
 		<script src='page-footer/page-footer.module.js'></script>
 		<script src='page-footer/page-footer.component.js'></script>
 
-		<!--<script src='side-bar/side-bar.module.js'></script>
-		<script src='side-bar/side-bar.component.js'></script>-->
+		<script src='side-bar/side-bar.module.js'></script>
+		<script src='side-bar/side-bar.component.js'></script>
 
 		<script src='card-list/card-list.module.js'></script>
 		<script src='card-list/card-list.component.js'></script>
@@ -33,12 +33,20 @@
 		<script src='card-edit/card-edit.component.js'></script>
 	</head>
 	<body ng-app='MainApp'>
-		<page-header></page-header>
-		
-		<div id='main_content'>
-			<ng-view></ng-view>
+
+		<div id='full_page'>
+			
+			<page-header></page-header>
+			
+			<side-bar></side-bar>
+
+			<div id='main_content'>
+				<ng-view></ng-view>
+			</div>
+
+			<page-footer></page-footer>
+
 		</div>
 
-		<page-footer></page-footer>
 	</body>
 </html>
