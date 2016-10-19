@@ -6,4 +6,5 @@ angular.module('MainApp',[
 	'CardDetail',
 	'CardEdit',
 	'PageHeader',
+	'PageFooter',
 ]);
