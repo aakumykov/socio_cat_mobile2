@@ -9,8 +9,13 @@ module.component('sideBar',{
 		sidebarToggle: '&',
 	},
 	controller: [ 'ss', function SideBarController(ss){
-		this.action = function(){
-			console.log('ss: '+ss);
+		this.close = function(){
+			console.log('SideBarController.close()');
+			ss.toggle();
+		}
+		this.status = function(){
+			console.log('SideBarController.status()');
+			return ss.status();
 		}
 	}]
 });
