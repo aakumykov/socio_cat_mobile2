@@ -38,11 +38,11 @@
 	</head>
 	<body ng-app='MainApp' ng-controller='MainController as root'>
 
-		<side-bar visibility="root.sideBar('?')"></side-bar>
+		<side-bar visibility="root.sideBar('?')" on-sidebar-toggle="root.sideBar('toggle')"></side-bar>
 
 		<div id='page'>
 			
-			<page-header></page-header>
+			<page-header on-sidebar-toggle="root.sideBar('toggle')"></page-header>
 
 			<!--<side-bar-toggler action="root.sideBar($event.cmd)"></side-bar-toggler>-->
 

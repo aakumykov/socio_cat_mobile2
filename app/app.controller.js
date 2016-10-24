@@ -3,7 +3,7 @@
 angular.module('MainApp').
 controller('MainController', function(){
 	this.page = {
-		sideBar: false,
+		sideBar: true,
 	},
 
 	this.sideBar = function(cmd){
