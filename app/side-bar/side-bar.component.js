@@ -1,16 +1,25 @@
 'use strict';
 
 function SideBarController(){
-	this.visible = true;
+	var self = this;
+	
+	self.visible = true;
 
-	this.status = function(){
-		console.log('SideBarController.status()');
-		return this.visible;
+	self.status = function(){
+		console.debug('SideBarController.status(), visible: '+self.visible);
+		return self.visible;
 	}
 
-	this.hide = function(){
-		console.log('SideBarController.hide()');
-		this.visible = false;
+	self.hide = function(){
+		console.debug('SideBarController.hide(), before: '+self.visible);
+		self.visible = false;
+		console.debug('SideBarController.hide(), after: '+self.visible);
+	}
+
+	self.show = function(){
+		console.debug('SideBarController.show(), before: '+self.visible);
+		self.visible = true;
+		console.debug('SideBarController.show(), after: '+self.visible);
 	}
 }
 
@@ -19,4 +28,12 @@ var module = angular.module('SideBar')
 module.component('sideBar', {
 	templateUrl: 'side-bar/side-bar.template.html',
 	controller: SideBarController,
+});
+
+module.component('sideBarLauncher', {
+	templateUrl: 'side-bar/side-bar-launcher.template.html',
+	controller: SideBarController,
+	bindings: {
+		action: '&',
+	},
 });
