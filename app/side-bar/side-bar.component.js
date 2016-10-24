@@ -36,4 +36,5 @@ module.component('sideBarLauncher', {
 	bindings: {
 		action: '&',
 	},
+	transclude: true,
 });
