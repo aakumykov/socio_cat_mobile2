@@ -14,4 +14,14 @@ module.service('ss', function(){
 		console.log('ss.toggle()');
 		this.visible = !this.visible;
 	}
+
+	this.show = function(){
+		console.log('ss.show()');
+		this.visible = true;
+	}
+
+	this.hide = function(){
+		console.log('ss.hide()');
+		this.visible = false;
+	}
 });
