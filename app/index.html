@@ -15,14 +15,17 @@
 		<script src='app.controller.js'></script>
 		<script src='app.config.js'></script>
 		
+		<script src='side-bar/side-bar.module.js'></script>
+		<script src='side-bar/side-bar.component.js'></script>
+
 		<script src='page-header/page-header.module.js'></script>
 		<script src='page-header/page-header.component.js'></script>
 		
 		<script src='page-footer/page-footer.module.js'></script>
 		<script src='page-footer/page-footer.component.js'></script>
 
-		<script src='side-bar/side-bar.module.js'></script>
-		<script src='side-bar/side-bar.component.js'></script>
+		<!--<script src='side-bar/side-bar.module.js'></script>
+		<script src='side-bar/side-bar.component.js'></script>-->
 
 		<script src='card-list/card-list.module.js'></script>
 		<script src='card-list/card-list.component.js'></script>
@@ -35,7 +38,7 @@
 	</head>
 	<body ng-app='MainApp' ng-controller='MainController as root'>
 
-		<side-bar visibility="root.sideBar('?')"></side-bar>
+		<side-bar></side-bar>
 
 		<div id='page'>
 			
