@@ -12,6 +12,7 @@
 		<script src='bower_components/angular-route/angular-route.min.js'></script>
 		
 		<script src='app.module.js'></script>
+		<script src='app.controller.js'></script>
 		<script src='app.config.js'></script>
 		
 		<script src='page-header/page-header.module.js'></script>
@@ -32,9 +33,9 @@
 		<script src='card-edit/card-edit.module.js'></script>
 		<script src='card-edit/card-edit.component.js'></script>
 	</head>
-	<body ng-app='MainApp'>
+	<body ng-app='MainApp' ng-controller='MainController as root'>
 
-		<side-bar></side-bar>
+		<side-bar visibility="root.sideBar('?')"></side-bar>
 
 		<div id='page'>
 			
