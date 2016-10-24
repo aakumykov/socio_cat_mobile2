@@ -38,7 +38,7 @@
 	</head>
 	<body ng-app='MainApp' ng-controller='MainController as root'>
 
-		<side-bar visibility="root.sideBar('?')" on-sidebar-toggle="root.sideBar('toggle')"></side-bar>
+		<side-bar visibility="$sidebar.status()" on-sidebar-toggle="$sidebar.toggle()"></side-bar>
 
 		<div id='page'>
 			
