@@ -16,6 +16,7 @@
 		<script src='app.config.js'></script>
 		
 		<script src='side-bar/side-bar.module.js'></script>
+		<script src='side-bar/side-bar.service.js'></script>
 		<script src='side-bar/side-bar.component.js'></script>
 
 		<script src='page-header/page-header.module.js'></script>
@@ -38,13 +39,12 @@
 	</head>
 	<body ng-app='MainApp' ng-controller='MainController as root'>
 
-		<side-bar visibility="$sidebar.status()" on-sidebar-toggle="$sidebar.toggle()"></side-bar>
+		<!--<side-bar visibility="$sidebar.status()" on-sidebar-toggle="$sidebar.toggle()"></side-bar>-->
+		<side-bar></side-bar>
 
 		<div id='page'>
 			
 			<page-header on-sidebar-toggle="root.sideBar('toggle')"></page-header>
-
-			<!--<side-bar-toggler action="root.sideBar($event.cmd)"></side-bar-toggler>-->
 
 			<div id='main_content'>
 				<ng-view></ng-view>
