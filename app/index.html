@@ -12,8 +12,11 @@
 		<script src='bower_components/angular-route/angular-route.min.js'></script>
 		
 		<script src='app.module.js'></script>
-		<script src='app.controller.js'></script>
+		<!--<script src='app.controller.js'></script>-->
 		<script src='app.config.js'></script>
+		
+		<script src='core/dispatcher/dispatcher.module.js'></script>
+		<script src='core/dispatcher/dispatcher.controller.js'></script>
 		
 		<script src='side-bar/side-bar.module.js'></script>
 		<script src='side-bar/side-bar.component.js'></script>
@@ -38,11 +41,11 @@
 	</head>
 	<body ng-app='MainApp' ng-controller='MainController as root'>
 
-		<side-bar visibility="root.sideBar('?')" sidebar-toggle="root.sideBar('toggle')"></side-bar>
+		<side-bar></side-bar>
 
-		<div id='page'>
+		<!--<div id='page'>
 			
-			<page-header on-sidebar-toggle="root.sideBar('toggle')"></page-header>
+			<page-header></page-header>
 
 			<div id='main_content'>
 				<ng-view></ng-view>
@@ -50,7 +53,7 @@
 
 			<page-footer></page-footer>
 
-		</div>
+		</div>-->
 
 	</body>
 </html>

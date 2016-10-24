@@ -7,5 +7,5 @@ angular.module('MainApp',[
 	'CardEdit',
 	'PageHeader',
 	'PageFooter',
-	'SideBar',
+	'Sidebar',
 ]);
