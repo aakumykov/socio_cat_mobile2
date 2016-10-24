@@ -15,14 +15,17 @@
 		<script src='app.controller.js'></script>
 		<script src='app.config.js'></script>
 		
+		<script src='side-bar/side-bar.module.js'></script>
+		<script src='side-bar/side-bar.component.js'></script>
+
 		<script src='page-header/page-header.module.js'></script>
 		<script src='page-header/page-header.component.js'></script>
 		
 		<script src='page-footer/page-footer.module.js'></script>
 		<script src='page-footer/page-footer.component.js'></script>
 
-		<script src='side-bar/side-bar.module.js'></script>
-		<script src='side-bar/side-bar.component.js'></script>
+		<!--<script src='side-bar/side-bar.module.js'></script>
+		<script src='side-bar/side-bar.component.js'></script>-->
 
 		<script src='card-list/card-list.module.js'></script>
 		<script src='card-list/card-list.component.js'></script>
@@ -40,6 +43,8 @@
 		<div id='page'>
 			
 			<page-header></page-header>
+
+			<!--<side-bar-toggler action="root.sideBar($event.cmd)"></side-bar-toggler>-->
 
 			<div id='main_content'>
 				<ng-view></ng-view>

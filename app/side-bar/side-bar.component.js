@@ -1,9 +1,17 @@
 'use strict';
 
-angular.module('SideBar').
-	component('sideBar',{
-		templateUrl: 'side-bar/side-bar.template.html',
-		bindings: {
-			visibility: '<',
-		},
-	});
+var module = angular.module('SideBar');
+
+module.component('sideBar',{
+	templateUrl: 'side-bar/side-bar.template.html',
+	bindings: {
+		visibility: '<',
+	},
+});
+
+module.component('sideBarToggler',{
+	templateUrl: 'side-bar/side-bar-toggler.template.html',
+	bindings: {
+		action: '&',
+	},
+});
