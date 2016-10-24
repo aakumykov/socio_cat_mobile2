@@ -6,13 +6,13 @@ module.component('sideBar',{
 	templateUrl: 'side-bar/side-bar.template.html',
 	bindings: {
 		visibility: '<',
-		onSidebarToggle: '&',
+		sidebarToggle: '&',
 	},
 });
 
-// module.component('sideBarToggler',{
-// 	templateUrl: 'side-bar/side-bar-toggler.template.html',
-// 	bindings: {
-// 		action: '&',
-// 	},
-// });
+module.component('sideBarToggler',{
+	templateUrl: 'side-bar/side-bar-toggler.template.html',
+	bindings: {
+		action: '&',
+	},
+});
