@@ -1,18 +1,17 @@
 'use strict';
 
+function SideBarController(sideBarService) {
+
+}
+
 var module = angular.module('SideBar');
 
 module.component('sideBar',{
 	templateUrl: 'side-bar/side-bar.template.html',
-	bindings: {
-		visibility: '<',
-		sidebarToggle: '&',
-	},
+	controller: SideBarController,
 });
 
 module.component('sideBarToggler',{
-	templateUrl: 'side-bar/side-bar-toggler.template.html',
-	bindings: {
-		action: '&',
-	},
+	template: "<a ng-click='' href='javascript:void(0)' id='sidebar_button' title='Меню'>@Меню</a>",
+	controller: SideBarController,
 });
