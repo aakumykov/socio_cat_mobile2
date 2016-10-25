@@ -5,21 +5,49 @@
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
+
         <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
+
+        <link rel='stylesheet' href='css/vendor/w3/w3.css'>
+        <link rel='stylesheet' href='css/vendor/w3/w3-theme-blue.css'>
+        <link rel='stylesheet' href='css/index.css'>
+
+        <!-- системные скрипты -->
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript" src="js/angular.js"></script>
-		<script type="text/javascript" src="js/angular-touch.js"></script>
-        <script type="text/javascript" src="js/myapp.js"></script>
+        
+        <script src='js/vendor/angular.js'></script>
+        <script src='js/vendor/angular-route.js'></script>
+
+        <!-- пользовательские скрипты -->
+        <script src='components/app.module.js'></script>
+        <script src='components/app.controller.js'></script>
+        <script src='components/app.config.js'></script>
+        
+        <script src='components/side-bar/side-bar.module.js'></script>
+        <script src='components/side-bar/side-bar.component.js'></script>
+
+        <script src='components/page-header/page-header.module.js'></script>
+        <script src='components/page-header/page-header.component.js'></script>
+        
+        <script src='components/page-footer/page-footer.module.js'></script>
+        <script src='components/page-footer/page-footer.component.js'></script>
+
+        <script src='components/card-list/card-list.module.js'></script>
+        <script src='components/card-list/card-list.component.js'></script>
+
+        <script src='components/card-detail/card-detail.module.js'></script>
+        <script src='components/card-detail/card-detail.component.js'></script>
+
+        <script src='components/card-edit/card-edit.module.js'></script>
+        <script src='components/card-edit/card-edit.component.js'></script>
+        
+        <script src='app.config.js'></script>
+        <script src='app.controller.js'></script>
+        <script src='app.module.js'></script>
+        <!-- пользовательские скрипты -->
+    </head>
+    <body>
+        
     </body>
 </html>
