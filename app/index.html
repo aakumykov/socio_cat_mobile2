@@ -39,11 +39,11 @@
 	</head>
 	<body ng-app='MainApp' ng-controller='MainController as root'>
 
-		<side-bar visibility="root.sideBar('?')" sidebar-toggle="root.sideBar('toggle')"></side-bar>
+		<side-bar></side-bar>
 
 		<div id='page'>
 			
-			<page-header on-sidebar-toggle="root.sideBar('toggle')"></page-header>
+			<page-header></page-header>
 
 			<div id='main_content'>
 				<ng-view></ng-view>
