@@ -3,37 +3,38 @@
 var module = angular.module('SideBar');
 
 module.factory('sideBarService', function(){
-	var visibility = false;
+	var visibility = true;
 
-	var all_callbacks = [];
-	
-	var onToggle = function(callback){
-		console.debug('sideBarService.onToggle()');
-		all_callbacks.push(callback);
-	}
+	var cmd = function(name){
+		console.debug('sideBarService.cmd('+name+')');
 
-	var trigger_callbacks = function(){
-		for (var i=0; i<all_callbacks.length; i++) {
-			all_callbacks[i](visibility);
+		switch (name) {
+			case 'status':
+				return status();
+			case 'show':
+				return show();
+			case 'hide':
+				return hide();
+			case 'toggle':
+				return toggle();
+			default:
+				console.error("неизвестная команда '"+name+"'");
 		}
 	}
 
 	var toggle = function(){
 		console.debug('sideBarService.toggle()');
 		visibility = !visibility;
-		trigger_callbacks();
 	}
 
 	var show = function(){
 		console.debug('sideBarService.show()');
 		visibility = true;
-		trigger_callbacks();
 	}
 
 	var hide = function(){
 		console.debug('sideBarService.hide()');
 		visibility = false;
-		trigger_callbacks();
 	}
 
 	var status = function(){
@@ -42,10 +43,6 @@ module.factory('sideBarService', function(){
 	}
 
 	return {
-		onToggle: onToggle,
-		toggle: toggle,
-		show: show,
-		hide: hide,
-		status: status,
+		cmd: cmd,
 	}
 });
