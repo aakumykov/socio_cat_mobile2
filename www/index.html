@@ -20,34 +20,46 @@
         <script src='js/vendor/angular-route.js'></script>
 
         <!-- пользовательские скрипты -->
-        <script src='components/app.module.js'></script>
-        <script src='components/app.controller.js'></script>
-        <script src='components/app.config.js'></script>
+        <script src='app/app.module.js'></script>
+        <script src='app/app.controller.js'></script>
+        <script src='app/app.config.js'></script>
+        <!--<script src='app/app.load.js'></script>-->
         
-        <script src='components/side-bar/side-bar.module.js'></script>
-        <script src='components/side-bar/side-bar.component.js'></script>
+        <script src='side-bar/side-bar.module.js'></script>
+        <script src='side-bar/side-bar.service.js'></script>
+        <script src='side-bar/side-bar.component.js'></script>
 
-        <script src='components/page-header/page-header.module.js'></script>
-        <script src='components/page-header/page-header.component.js'></script>
+        <script src='page-header/page-header.module.js'></script>
+        <script src='page-header/page-header.component.js'></script>
         
-        <script src='components/page-footer/page-footer.module.js'></script>
-        <script src='components/page-footer/page-footer.component.js'></script>
+        <script src='page-footer/page-footer.module.js'></script>
+        <script src='page-footer/page-footer.component.js'></script>
 
-        <script src='components/card-list/card-list.module.js'></script>
-        <script src='components/card-list/card-list.component.js'></script>
+        <script src='card-list/card-list.module.js'></script>
+        <script src='card-list/card-list.component.js'></script>
 
-        <script src='components/card-detail/card-detail.module.js'></script>
-        <script src='components/card-detail/card-detail.component.js'></script>
+        <script src='card-detail/card-detail.module.js'></script>
+        <script src='card-detail/card-detail.component.js'></script>
 
-        <script src='components/card-edit/card-edit.module.js'></script>
-        <script src='components/card-edit/card-edit.component.js'></script>
-        
-        <script src='app.config.js'></script>
-        <script src='app.controller.js'></script>
-        <script src='app.module.js'></script>
+        <script src='card-edit/card-edit.module.js'></script>
+        <script src='card-edit/card-edit.component.js'></script>
         <!-- пользовательские скрипты -->
     </head>
-    <body>
-        
+
+    <body ng-app='MainApp' ng-controller='MainController as root'>
+        <side-bar visibility="root.sideBar('?')" sidebar-toggle="root.sideBar('toggle')"></side-bar>
+
+        <div id='page'>
+            
+            <page-header on-sidebar-toggle="root.sideBar('toggle')"></page-header>
+
+            <div id='main_content'>
+                <ng-view></ng-view>
+            </div>
+
+            <page-footer></page-footer>
+
+        </div>
+
     </body>
 </html>
