@@ -1,17 +1,21 @@
 'use strict';
 
 function SideBarController(sideBarService) {
-	this.visibility = false;
-	var self = this;
-	
-	sideBarService.onToggle(function(visibility){
-		console.debug('SideBarController.onToggle.CALLBACK('+this.visibility+')');
-		self.visibility = visibility;
-	});
-	
 	this.status = function(){
-		console.debug('SideBarController.status('+this.visibility+')');
-		return this.visibility;
+		console.debug('SideBarController.status()');
+		return sideBarService.status();
+	}
+	this.hide = function(){
+		console.debug('SideBarController.hide()');
+		sideBarService.hide();
+	}
+	this.show = function(){
+		console.debug('SideBarController.show()');
+		sideBarService.show();
+	}
+	this.toggle = function(){
+		console.debug('SideBarController.show()');
+		sideBarService.show();
 	}
 }
 
@@ -23,6 +27,6 @@ module.component('sideBar',{
 });
 
 module.component('sideBarToggler',{
-	template: "<a ng-click='' href='javascript:void(0)' id='sidebar_button' title='Меню'>@Меню</a>",
+	template: "<a ng-click='$ctrl.show()' href='javascript:void(0)' id='sidebar_button' title='Меню'>@Меню</a>",
 	controller: SideBarController,
 });
