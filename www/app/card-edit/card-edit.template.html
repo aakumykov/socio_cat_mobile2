@@ -1,0 +1,13 @@
+<fieldset>
+	<legend>Правка карточки {{$ctrl.card.id}}</legend>
+	<p>
+		<input type='text' ng-model='$ctrl.card.title'/>
+	</p>
+	<p>
+		<textarea>{{$ctrl.card.content}}</textarea>
+	</p>
+	<p>
+		<button ng-click='$ctrl.cancel()'>Отмена</button>
+		<button ng-click='$ctrl.save()'>Сохранить</button>
+	</p>
+</fieldset>

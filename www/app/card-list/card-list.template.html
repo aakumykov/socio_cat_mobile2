@@ -1,0 +1,6 @@
+<fieldset ng-repeat="card in $ctrl.cardList">
+	<legend>
+		<a ng-href='#!/cards/{{card.id}}'>{{card.title}}</a>
+	</legend>
+	<div>{{card.content}}</div>
+</fieldset>
