@@ -1,16 +1,16 @@
 <fieldset>
-	<legend>{{name}}</legend>
+	<legend>{{$ctrl.getName()}}</legend>
 	<p>
-		photo_src.length: {{photo_src.length}}
+		photo_src.length: {{ $ctrl.photoSrc().length }}
 	</p>
-	<p>
+<!-- 	<p>
 		Name: {{name}}
 	</p>
 	<p>
 		<input type='text' ng-model="name">
-	</p>
+	</p> -->
 	<div>
-		<img id='photo_preview' ng-src='{{photo_src}}' alt='здесь появится фото'>
+		<img id='photo_preview' ng-src="{{$ctrl.photoSrc()}}" alt='здесь появится фото'>
 	</div>
 	<p>
 		<button ng-click='$ctrl.takeAPhoto()'>Сфотать</button>
