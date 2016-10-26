@@ -16,6 +16,11 @@
 	color: white;
 }
 
+#photo_preview {
+	border: 1px dotted grey;
+	border-radius: 6px;
+}
+
 INPUT,
 TEXTAREA
 {
