@@ -1,7 +1,7 @@
 <fieldset>
-	<legend>{{$ctrl.name}}</legend>
+	<legend>{{$ctrl.name}} ({{$ctrl.photo_src.length}})</legend>
 	<div>
-		<img id='photo_preview' src='{{$ctrl.photo_src}}' alt='здесь появится фото'>
+		<img id='photo_preview' ng-src='{{$ctrl.photo_src}}' alt='здесь появится фото'>
 	</div>
 	<p>
 		<button ng-click='$ctrl.takeAPhoto()'>Сфотать</button>

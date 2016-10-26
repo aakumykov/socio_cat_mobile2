@@ -19,6 +19,8 @@
 #photo_preview {
 	border: 1px dotted grey;
 	border-radius: 6px;
+	max-height: 300px;
+	max-width: 300px;
 }
 
 INPUT,

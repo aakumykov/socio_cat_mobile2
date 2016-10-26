@@ -23,8 +23,13 @@ function MyCameraController(){
 	}
 
 	self.onSuccess = function(imageURI){
-		console.debug('onSuccess('+imageURI+')');
 		self.photo_src = "data:image/jpeg;base64," + imageURI;
+		
+		//console.debug('onSuccess('+self.photo_src.substring(0,100)+')');
+		
+		console.debug('onSuccess(------------- imageURI -------------)');
+		console.debug(self.photo_src);
+		console.debug('onSuccess(------------- imageURI -------------)');
 	}
 
 	self.onFail = function(message) {
