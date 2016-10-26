@@ -20,6 +20,9 @@ angular.module('MainApp').
 				when('/cards/:id/edit',{
 					template: '<card-edit></card-edit>'
 				}).
+				when('/photo',{
+					template: '<my-camera></my-camera>'
+				}).
 				otherwise({
 					template: 'неизвестная страница'
 				});

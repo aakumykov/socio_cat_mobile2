@@ -8,4 +8,5 @@ angular.module('MainApp',[
 	'PageHeader',
 	'PageFooter',
 	'SideBar',
+	'MyCamera',
 ]);
