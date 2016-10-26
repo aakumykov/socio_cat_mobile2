@@ -9,7 +9,7 @@ angular.module('CardDetail').
 			this.card = undefined;
 
 			var id = $routeParams.id;
-			  console.log('view id: '+id);
+			  console.log('CardDetail, view id: '+id);
 
 			$http.get('cards/list.json').then(function(response){
 				var cardList = response.data;

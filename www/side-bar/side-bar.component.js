@@ -2,7 +2,7 @@
 
 function SideBarController(sideBarService) {
 	this.cmd = function(name){
-		console.debug('SideBarController.cmd('+name+')');
+		//console.debug('SideBarController.cmd('+name+')');
 		return sideBarService.cmd(name);
 	}
 }
@@ -15,6 +15,6 @@ module.component('sideBar',{
 });
 
 module.component('sideBarToggler',{
-	template: "<a ng-click='$ctrl.cmd(\"show\")' href='#' id='sidebar_button' title='Меню'>@Меню</a>",
+	template: "<span ng-click='$ctrl.cmd(\"show\")' id='sidebar_button' title='Меню'>@Меню</span>",
 	controller: SideBarController,
 });

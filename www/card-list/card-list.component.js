@@ -7,6 +7,7 @@ angular.module('CardList').
 			var self = this;
 			
 			$http.get('cards/list.json').then(function(response){
+				console.log('CardList');
 				self.cardList = response.data;
 			});
 		}]
