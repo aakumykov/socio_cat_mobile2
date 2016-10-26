@@ -15,6 +15,6 @@ module.component('sideBar',{
 });
 
 module.component('sideBarToggler',{
-	template: "<a ng-click='$ctrl.cmd(\"show\")' href='javascript:void(0)' id='sidebar_button' title='Меню'>@Меню</a>",
+	template: "<a ng-click='$ctrl.cmd(\"show\")' href='#' id='sidebar_button' title='Меню'>@Меню</a>",
 	controller: SideBarController,
 });
